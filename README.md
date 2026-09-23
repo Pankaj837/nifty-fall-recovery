@@ -87,6 +87,14 @@ Confidence intervals for the difference that include 0 in both periods, and a ne
 
 - The backtest covers the full sample including OOS, uses trade-level drawdown, and is not a strategy proposal.
 
+## Why these statistics
+- **Mean and median:** the mean is the expected return but a few crash days can pull it. The median shows the typical event. Out-of-sample they differ (mean -0.107%, median -0.007%), and the skew of -1.98 shows the crash tail.
+- **Win rate:** shows how often a trade makes money. Out-of-sample it was 48.7% for events against 53.4% for normal days.
+- **Std, skew, worst case:** measure risk. In development, event trades had a std of 4.7% against 3.1% for normal days.
+- **Bootstrap CI for the difference:** it needs no normality assumption, and block resampling respects the overlap in baseline returns. It shows which differences are compatible with the data. Here the interval includes 0, so the data cannot tell "no effect" from a small effect. The intervals are about +-1% wide, so an effect of up to about 1% could exist undetected. This is "no evidence", not "proof of no effect".
+- **Welch t-test:** secondary only, because overlapping returns make its p-value optimistic.
+- **Statistical vs economic significance:** even the best-looking grid cell (+0.58%) was not significant, and it is small compared with a 4.7% std and 0.10% costs.
+- **Data snooping and overfitting:** the primary test was fixed in advance, and no parameter was tuned. The 12-cell grid is judged against a Bonferroni cutoff (0.0042), and the best cell was not picked. The "excluding 2008 and 2020" result is post-hoc and exploratory. The OOS period was run once with a pre-set rule.
 
 
 ## Reproduce
