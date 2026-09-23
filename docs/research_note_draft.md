@@ -14,7 +14,7 @@ After NIFTY 50 falls 2% or more close-to-close in one day, the average 5-day for
 
 \- Entry: next trading day's open (the day's return is only known at the close).
 
-\- Exit: close of the 5th trading day after entry. Alternative holding periods: 1, 3, 10.
+\- Exit: close of trading day hold counting the entry day as day 1. Entry is the next day's open, so hold = 1 means buy at the next open and sell at that same day's close.
 
 \- Recovery: forward return > 0, and also forward return > baseline mean.
 
