@@ -1,6 +1,6 @@
 # Does NIFTY recover after a big one-day fall?
 
-
+**Video walkthrough:** https://drive.google.com/file/d/1bPec_e7YnrYV135RkV16kavYnTllTXiq/view?usp=sharing 
 
 **Result: no evidence for the hypothesis.** This holds in the development period, out-of-sample, and across a robustness grid.
 
